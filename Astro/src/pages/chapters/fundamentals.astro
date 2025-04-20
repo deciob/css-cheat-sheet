@@ -1,0 +1,48 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout>
+  <h1>Fundamentals</h1>
+  <h2>The structure of a rule</h2>
+  <section class="fundamentals__rule">
+    <div>h1</div>
+    <div class="fundamentals__rule--declaration">
+      <div>&#123;</div>
+      <div class="fundamentals__rule--box">color: red;</div>
+      <div class="fundamentals__rule--box">background: yellow;</div>
+      <div>&#125;</div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .fundamentals__rule {
+    display: flex;
+    inline-size: fit-content;
+    align-items: center;
+    gap: 1rem;
+    border: 1px solid black;
+    padding-inline: 1rem;
+    padding-block: 2rem;
+  }
+
+  .fundamentals__rule > div {
+    align-items: center;
+  }
+
+  .fundamentals__rule--declaration {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .fundamentals__rule--box {
+    border: 1px solid black;
+    padding: 0.5rem;
+  }
+
+  .fundamentals__rule--box:first-child {
+    border: 1px solid red;
+    background: red;
+  }
+</style>
